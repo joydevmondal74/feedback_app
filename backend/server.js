@@ -9,7 +9,12 @@ const app = express();
 /* Middleware */
 
 app.use(cors({
-  origin: "*", // You can keep "*" for now, but update it later for security
+  origin: [
+    "http://localhost:5173", //local
+    "https://feedback-app-ten-sigma.vercel.app/" //Vercel URL
+  ],
+  methods: ["GET", "POST"],
+  credentials: true
 }));
 app.use(express.json());
 
