@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("background.png");
+  background-image: url("/background.png");
   overflow: hidden;
   position: relative;
   padding: 20px;
