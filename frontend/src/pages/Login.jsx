@@ -2,7 +2,7 @@ import React from 'react'
 import "./Login.css";
 import axios from "axios";
 import { useState } from "react";
-import API from '../api';
+import API from '../api.js';
 
 export const Login = () => {
 
