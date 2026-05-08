@@ -10,7 +10,6 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "http://localhost:5173", //local
     "https://feedback-app-ten-sigma.vercel.app/" //Vercel URL
   ],
   methods: ["GET", "POST"],
