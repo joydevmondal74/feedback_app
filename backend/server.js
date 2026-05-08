@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors({
   origin: [
-    "https://feedback-app-ten-sigma.vercel.app/" //Vercel URL
+    "https://feedback-app-alpha-wine.vercel.app/" //Vercel URL
   ],
   methods: ["GET", "POST"],
   credentials: true
