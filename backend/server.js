@@ -40,12 +40,12 @@ db.connect((err) => {
 
 app.post("/submit", (req, res) => {
 
-  const { name, phone, email, feedback } = req.body;
+  const { name, phone, email, feedback, address } = req.body;
 
   const sql =
-    "INSERT INTO users_feedback(name, phone, email, feedback) VALUES (?, ?, ?, ?)";
+    "INSERT INTO users_feedback(name, phone, email, feedback, address) VALUES (?, ?, ?, ?, ?)";
 
-  db.query(sql, [name, phone, email, feedback], (err, result) => {
+  db.query(sql, [name, phone, email, feedback, address], (err, result) => {
 
     if (err) {
       console.log(err);
