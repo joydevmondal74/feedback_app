@@ -43,7 +43,7 @@ app.post("/submit", (req, res) => {
   const { name, phone, email, feedback } = req.body;
 
   const sql =
-    "INSERT INTO users_info (name, phone, email, feedback) VALUES (?, ?, ?, ?)";
+    "INSERT INTO users_feedback(name, phone, email, feedback) VALUES (?, ?, ?, ?)";
 
   db.query(sql, [name, phone, email, feedback], (err, result) => {
 
