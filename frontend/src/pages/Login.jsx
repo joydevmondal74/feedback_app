@@ -112,7 +112,7 @@ export const Login = () => {
             </span>
 
             <input
-              type="text"
+              type="tel"
               className="form-control"
               placeholder="Enter your phone number"
               name='phone'
