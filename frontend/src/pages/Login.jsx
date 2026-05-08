@@ -28,14 +28,14 @@ export const Login = () => {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
-    /* Phone Validation */
 
-  const phoneRegex = /^[6-9]\d{9}$/;
+/* Phone Validation */
 
-  if (!phoneRegex.test(formData.phone)) {
-    alert("Please enter a valid 10-digit phone number");
-    return;
-  }
+if (formData.phone.length !== 10) {
+  alert("Phone number must be exactly 10 digits");
+  return;
+}
+    
 
     try {
       const res = await axios.post("https://feedback-backend-x0b8.onrender.com/submit",formData); 
@@ -117,7 +117,16 @@ export const Login = () => {
               placeholder="Enter your phone number"
               name='phone'
               value={formData.phone}
-              onChange={handleChange}
+              onChange={(e)=>{
+                const value=e.target.value;
+                // Allow only numbers and max 10 Digits
+                if(/^\d{0,10}$/.test(value)){
+                  setFormData({
+                    ...formData,
+                    phone:value,
+                  })
+                }
+              }}
             />
           </div>
 
