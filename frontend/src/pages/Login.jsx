@@ -30,7 +30,7 @@ export const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await API.post("/submit", formData);
+      const res = await axios.post("https://feedback-backend-x0b8.onrender.com/submit",formData); 
       alert(res.data);
       setFormData({
         name: "",
