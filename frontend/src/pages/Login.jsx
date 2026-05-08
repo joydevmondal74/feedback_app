@@ -2,6 +2,7 @@ import React from 'react'
 import "./Login.css";
 import axios from "axios";
 import { useState } from "react";
+import API from '../api';
 
 export const Login = () => {
 
@@ -29,14 +30,8 @@ export const Login = () => {
     e.preventDefault();
 
     try {
-
-      const res = await axios.post(
-        "http://localhost:5000/submit",
-        formData
-      );
-
+      const res = await API.post("/submit", formData);
       alert(res.data);
-
       setFormData({
         name: "",
         phone: "",
