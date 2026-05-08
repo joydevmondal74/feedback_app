@@ -28,6 +28,14 @@ export const Login = () => {
   const handleSubmit = async (e) => {
 
     e.preventDefault();
+    /* Phone Validation */
+
+  const phoneRegex = /^[6-9]\d{9}$/;
+
+  if (!phoneRegex.test(formData.phone)) {
+    alert("Please enter a valid 10-digit phone number");
+    return;
+  }
 
     try {
       const res = await axios.post("https://feedback-backend-x0b8.onrender.com/submit",formData); 
