@@ -213,7 +213,7 @@ if (formData.phone.length !== 10) {
             name='feedback'
             value={formData.feedback}
             onChange={handleChange}
-            
+            required
             ></textarea>
           </div>
 
