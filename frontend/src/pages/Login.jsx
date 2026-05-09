@@ -40,7 +40,8 @@ if (
   !formData.name.trim() ||
   !formData.phone.trim() ||
   !formData.email.trim() ||
-  !formData.address.trim()
+  !formData.address.trim() ||
+  !formData.feedback.trim()
 ) {
   alert("Please fill all the fields");
   return;
