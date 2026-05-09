@@ -34,6 +34,19 @@ export const Login = () => {
 
     e.preventDefault();
 
+    /* Required Field Validation */
+
+if (
+  !formData.name.trim() ||
+  !formData.phone.trim() ||
+  !formData.email.trim() ||
+  !formData.address.trim() ||
+  !formData.feedback.trim()
+) {
+  alert("Please fill all the fields");
+  return;
+}
+
 /* Phone Validation */
 
 if (formData.phone.length !== 10) {
@@ -117,6 +130,7 @@ if (formData.phone.length !== 10) {
               name="name"
               value={formData.name}
               onChange={handleChange}
+              required
               
             />
           </div>
@@ -146,6 +160,7 @@ if (formData.phone.length !== 10) {
                   })
                 }
               }}
+              required
             />
           </div>
 
@@ -165,6 +180,7 @@ if (formData.phone.length !== 10) {
               name='email'
               value={formData.email}
               onChange={handleChange}
+              required
             />
           </div>
           {/* Address */}
@@ -182,6 +198,7 @@ if (formData.phone.length !== 10) {
               name="address"
               value={formData.address}
               onChange={handleChange}
+              required
               
             />
           </div>
@@ -196,6 +213,7 @@ if (formData.phone.length !== 10) {
             name='feedback'
             value={formData.feedback}
             onChange={handleChange}
+            required
             ></textarea>
           </div>
 
