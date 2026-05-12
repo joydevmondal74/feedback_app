@@ -57,7 +57,7 @@ if (formData.phone.length !== 10) {
     setIsSubmitting(true);
 
     try {
-      const res = await API.post('/submit',formData); 
+      const res = await API.post("/submit",formData); 
       alert(res.data);
       setFormData({
         name: "",
