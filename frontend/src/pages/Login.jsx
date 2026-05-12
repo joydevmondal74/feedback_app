@@ -57,7 +57,7 @@ if (formData.phone.length !== 10) {
     setIsSubmitting(true);
 
     try {
-      const res = await axios.post("https://feedback-backend-x0b8.onrender.com/submit",formData); 
+      const res = await API.post('/submit',formData); 
       alert(res.data);
       setFormData({
         name: "",
